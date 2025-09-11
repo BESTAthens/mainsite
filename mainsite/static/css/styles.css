@@ -1,0 +1,365 @@
+
+/* Για το base*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+/* Reset default margins */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* important for flex layout */
+  }
+  
+  /* Page wrapper: make the body a column flexbox */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    font-family: Verdana, sans-serif; 
+    margin:0; 
+    background-color: rgb(8, 117, 163);
+  }
+  
+  /* Main content takes up all remaining space */
+  main {
+    flex: 1;
+  }
+  
+  /* Footer styles (yours already) */
+  .footer_section {
+    background-color: #222;
+    color: #eee;
+    padding: 2rem 1rem;
+  }
+
+
+
+.navbar{
+    background: #edebeb;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15%;
+}
+
+#navbar_logo img{
+    max-width: auto;
+    height: 80px;
+}
+
+.fa-gem{
+    margin-right:  0.5rem;
+}
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item{
+    height: 30%;
+}
+
+.navbar_links{
+    color: #6f90e4;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar_links:hover {
+    color: #2efa1b ;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:960px){
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0
+    }
+
+
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: auto;
+        margin: 0;
+        width: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 100vh;
+        z-index:-1;
+    }
+
+    .navbar_menu.active{
+        background: #edebeb;
+        top: 100%;
+        opacity:1;
+        transition: all 0.5s ease ;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar_logo img{
+        padding-left: 25px;
+    }   
+
+    .navbar_toggle.bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #2efa1b;
+    }
+
+    .navbar_item{
+        width: 100%;
+    }
+
+    .navbar_links{
+        display: table;
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        
+    }
+
+}
+
+#mobile-menu{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+
+
+
+.footer_section {
+    background-color: #222;       /* dark background */
+    color: #eee;                  /* light text */
+    padding: 2rem 1rem;
+  }
+  
+  .footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .footer_brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer_logo {
+    height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer_text {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .footer_nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer_nav a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  .footer_nav a:hover {
+    color: #1e90ff; /* highlight color */
+  }
+  
+  .footer_socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .footer_socials a {
+    color: #eee;
+    transition: color 0.2s ease;
+  }
+  
+  .footer_socials a:hover {
+    color: #1e90ff;
+  }
+
+/* Για το ABOUT*/
+    
+.circle_with_text {
+    overflow: hidden;
+    padding: 1em;
+    width: 34em;
+    height: 34em;
+    border-radius: 50%;
+    color: #fff;
+    hyphens: auto;
+    font-weight: 300;
+    text-align: center;
+    text-align-last: center;
+}
+
+[circle_with_text_flag='true'] {
+    display: contents;
+}
+
+[circle_with_text_flag='true']:before,
+[circle_with_text_flag='true']:after {
+    content: "";
+    float: left;
+    width: 50%;
+    height: 100%;
+    --bite:
+    radial-gradient(
+    farthest-side at var(--pos-x, 100%),
+    transparent 99%,
+    rgb(8, 117, 163));
+    shape-outside: var(--bite);
+}
+
+[circle_with_text_flag='true']:after {
+    float: right;
+    --pos-x: 0;
+}
+
+.side_by_side{
+    width: 100%;
+    overflow: auto;
+}
+
+.side_by_side div{
+    width: 33%;
+    float: left;
+}
+
+/* Για το SPONSORS*/
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;          /* ✅ wrap into multiple rows */
+    gap: 2rem;                /* ✅ equal spacing everywhere */
+    justify-content: center;  /* ✅ centers items, including last row */
+    margin: 0 2rem;
+}
+  
+.grid-item {
+    flex: 0 1 18rem;          /* ✅ each card ~18rem wide */
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 1rem;
+    border: 0.01rem solid #eee;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.02rem 0.05rem rgba(0,0,0,0.05);
+}
+  
+.grid-item img {
+    max-height: 10rem;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.grid-item img {
+    transition: transform 0.3s ease;
+}
+  
+grid-item:hover img {
+    transform: scale(1.05); /* ✅ zoom logo */
+}
+
+
+
+
+/* Για το TEAM*/
+
+.team_title {
+    text-align: center;
+    margin: 3.6rem 0 2.4rem;   /* +20% margin */
+    font-size: 2.4rem;         /* +20% font size */
+    color: #fff;
+  }
+  
+  .team_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;               /* +20% gap */
+    justify-content: center;
+    margin: 0 2.4rem;          /* +20% margin */
+  }
+  
+  .team_card {
+    flex: 0 1 21.6rem;         /* +20% width (was 18rem) */
+    background: white;
+    border: 0.01rem solid #eee;
+    border-radius: 0.96rem;    /* +20% radius */
+    box-shadow: 0 0.024rem 0.06rem rgba(0,0,0,0.05);
+    padding: 1.8rem;           /* +20% padding */
+    text-align: center;
+  }
+  
+  .team_card img {
+    width: 100%;
+    height: 19.2rem;           /* +20% height (was 16rem) */
+    object-fit: cover;
+    border-radius: 0.96rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .team_name {
+    margin: 0.6rem 0 0.24rem;
+    font-size: 1.44rem;        /* +20% font size */
+    color: #222;
+  }
+  
+  .team_role {
+    font-size: 1.2rem;         /* +20% font size */
+    color: #666;
+  }
