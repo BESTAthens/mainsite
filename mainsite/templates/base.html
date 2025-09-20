@@ -1,82 +1,82 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    {%load static%}
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Best</title>
-        <link rel="stylesheet" href="{% static  'css/styles.css' %}">
-
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="navbar_container">
-                <a href="/" id="navbar_logo">  <img src="{% static 'images/BEST_Athens.png' %}" alt="Best Athens"></a>   <!-- created a#name then tab, a for a tag, # for id  -->
-                <div class="navbar_togle" id="mobile-menu"></div> <!-- this points javascript -->
-                <span class="bar"></span>  <!-- gives bar-->
-                <span class="bar"></span> <!-- shift +alt + downArr copy, paste below-->
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="/" class="navbar_links">Home</a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/about" class="navbar_links">About</a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/events" class="navbar_links">Events</a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/team" class="navbar_links">Team</a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/sponsors" class="navbar_links">Sponsors</a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/contact" class="navbar_links">Contact</a>
-                </li>
-
-            </ul>
-        </nav>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="/" id="navbar_logo">
+                <img src="{% static 'images/BEST_Athens.png' %}" alt="Best Athens">
+            </a>
+            <div class="navbar_togle" id="mobile-menu"></div>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+            <li class="navbar_item">
+                <a href="/" class="navbar_links">Home</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/about" class="navbar_links">About</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/events" class="navbar_links">Events</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/team" class="navbar_links">Team</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/sponsors" class="navbar_links">Sponsors</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/contact" class="navbar_links">Contact</a>
+            </li>
+            <!-- Added Join Us button -->
+            <li class="navbar_item">
+                <a href="{% url 'join_us' %}" class="navbar_links">Join Us</a>
+            </li>
+        </ul>
+    </nav>
 
     {% block content %}
-
     <h1>Hello there</h1>
-
-    {%endblock%}
+    {% endblock %}
     <div><br></div>
+</body>
 
-
-    </body>
-
-
-    <footer class="footer_section">
-        <div class="footer_container">
-          <div class="footer_brand">
+<footer class="footer_section">
+    <div class="footer_container">
+        <div class="footer_brand">
             <img src="{% static 'images/BEST_Athens.png' %}" alt="Site Logo" class="footer_logo">
             <p class="footer_text">© 2025 BEST Athens. All rights reserved.</p>
-          </div>
-          
-          <nav class="footer_nav">
+        </div>
+        
+        <nav class="footer_nav">
             <a href="/">Home</a>
             <a href="/about/">About</a>
             <a href="/team/">Team</a>
             <a href="/events/">Events</a>
             <a href="/sponsors/">Sponsors</a>
             <a href="/contact/">Contact</a>
-          </nav>
-          
-          <div class="footer_socials">
+            <!-- Added Join Us link in footer -->
+            <a href="{% url 'join_us' %}">Join Us</a>
+        </nav>
+        
+        <div class="footer_socials">
             <a href="https://facebook.com" target="_blank">🌐</a>
             <a href="https://twitter.com" target="_blank">🐦</a>
             <a href="https://linkedin.com" target="_blank">💼</a>
             <a href="https://instagram.com" target="_blank">📸</a>
-          </div>
         </div>
-      </footer>
-      
-
+    </div>
+</footer>
 </html>
+

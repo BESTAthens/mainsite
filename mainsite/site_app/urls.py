@@ -8,4 +8,5 @@ urlpatterns=[
     path('team/', views.team, name='team' ),
     path('sponsors/',views.sponsors, name='sponsors'),
     path('contact/', views.contact, name='contact' ),
+    path("join-us/", views.joinus, name="join_us"),
 ]

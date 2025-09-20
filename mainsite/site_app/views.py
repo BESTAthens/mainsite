@@ -20,3 +20,6 @@ def sponsors(request):
 
 def contact(request):
     return render(request, "site_app/contact.html")
+
+def joinus(request):
+    return render(request, "site_app/joinus.html")

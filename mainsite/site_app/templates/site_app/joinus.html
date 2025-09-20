@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1 style="margin: auto; width: 100%; font-weight:normal; color: #ffffff; font-size: 4rem; text-align:center;">
+    Join BEST Athens
+</h1>
+
+<h2 style="margin: auto; width: 80%; font-weight:normal; color: #ffffff; font-size: 2rem; text-align:center; margin-top: 2rem;">
+    Become a member of the BEST student organization of Europe
+</h2>
+
+<div class="grid" style="margin-top: 3rem;">
+    <div class="grid-item" style="text-align:center; padding: 1rem;">
+        <img src="{% static 'images/join/teamwork.png' %}" alt="Teamwork" style="max-width: 200px; margin-bottom: 1rem;">
+        <p style="color: #ffffff; font-size: 1.2rem;">Work in amazing teams</p>
+    </div>
+    <div class="grid-item" style="text-align:center; padding: 1rem;">
+        <img src="{% static 'images/join/travel.png' %}" alt="Travel" style="max-width: 200px; margin-bottom: 1rem;">
+        <p style="color: #ffffff; font-size: 1.2rem;">Travel all across Europe</p>
+    </div>
+    <div class="grid-item" style="text-align:center; padding: 1rem;">
+        <img src="{% static 'images/join/skills.png' %}" alt="Skills" style="max-width: 200px; margin-bottom: 1rem;">
+        <p style="color: #ffffff; font-size: 1.2rem;">Develop new skills</p>
+    </div>
+    <div class="grid-item" style="text-align:center; padding: 1rem;">
+        <img src="{% static 'images/join/fun.png' %}" alt="Fun" style="max-width: 200px; margin-bottom: 1rem;">
+        <p style="color: #ffffff; font-size: 1.2rem;">Create lifelong friendships</p>
+    </div>
+</div>
+
+<div style="margin-top: 4rem; text-align:center;">
+    <p style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1.5rem;">
+        Ready to take the next step? Fill out the application form and start your BEST journey today!
+    </p>
+    <a {# href="{% url 'application_form' %}" #} 
+       style="background-color: #ffcc00; color: #000; font-size: 1.5rem; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: bold;">
+       Apply Now
+    </a>
+</div>
+{% endblock %}
