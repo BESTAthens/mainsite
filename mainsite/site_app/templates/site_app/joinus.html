@@ -118,5 +118,33 @@
             height: auto; /* maintain aspect ratio */
         }
     }
+
+/*button*/
+.apply-section {
+    text-align: center;
+    margin-bottom: 40px; /* more space before υποσελιδο */
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 22px 60px; /* big button */
+    font-size: 1.5rem;  /* larger text */
+    border-radius: 12px;
+    background-color: #FFD700; /* gold/yellow */
+    color: #000; /* black text for contrast */
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* drop shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #FFC107; /* darker yellow on hover */
+    transform: scale(1.05); /* subtle grow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
+}
+
+
+
 </style>
 {% endblock %}
