@@ -29,140 +29,130 @@ html, body {
     flex: 1;
   }
   
-  /* Footer styles (yours already) ===========================================================================================================================*/
-  .footer_section {
-    background-color: #222;
-    color: #eee;
-    padding: 2rem 1rem;
-  }
 
 
-
-.navbar{
-    background: #edebeb;
-    height: 9%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+ /*navbar=======================================================================================================================================================*/
+ .navbar {
+  background: #edebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 5.5em; /* replaces 9% — consistent and scalable */
 }
 
 .navbar_container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  max-width: 81.25em; /* 1300px */
+  margin: 0 auto;
+  padding: 0 15%;
 }
 
-#navbar_logo img{
-    max-width: auto;
-    height: 80px;
+#navbar_logo img {
+  height: 4em;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
-.fa-gem{
-    margin-right:  0.5rem;
+
+.fa-gem {
+  margin-right: 0.5em;
 }
 
-.navbar_menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
 }
 
-.navbar_item{
-    height: 30%;
+.navbar_item {
+  height: 100%;
 }
 
-.navbar_links{
-    color: #6f90e4;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
+.navbar_links {
+  color: #6f90e4;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1em;
+  height: 100%;
 }
 
 .navbar_links:hover {
-    color: #2efa1b ;
-    transition: all 0.3s ease;
+  color: #2efa1b;
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width:960px){
-    .navbar_container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0
-    }
+/* Responsive */
+@media screen and (max-width: 60em) { /* 960px */
+  .navbar_container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 1em;
+  }
 
+  .navbar_menu {
+      display: grid;
+      grid-template-columns: auto;
+      width: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      height: 100vh;
+      z-index: -1;
+  }
 
-    .navbar_menu{
-        display: grid;
-        grid-template-columns: auto;
-        align-items: auto;
-        margin: 0;
-        width: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        height: 100vh;
-        z-index:-1;
-    }
+  .navbar_menu.active {
+      background: #edebeb;
+      top: 100%;
+      opacity: 1;
+      z-index: 99;
+      height: 100vh;
+      font-size: 1.6rem;
+  }
 
-    .navbar_menu.active{
-        background: #edebeb;
-        top: 100%;
-        opacity:1;
-        transition: all 0.5s ease ;
-        z-index: 99;
-        height: 100vh;
-        font-size: 1.6rem;
-    }
+  #navbar_logo img {
+      padding-left: 1.5em;
+      height: 3.5em; /* slightly smaller on mobile */
+  }
 
-    #navbar_logo img{
-        padding-left: 25px;
-    }   
+  .navbar_toggle.bar {
+      width: 1.5em;
+      height: 0.2em;
+      margin: 0.3em auto;
+      background: #2efa1b;
+      transition: all 0.3s ease-in-out;
+  }
 
-    .navbar_toggle.bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: #2efa1b;
-    }
-
-    .navbar_item{
-        width: 100%;
-    }
-
-    .navbar_links{
-        display: table;
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        
-    }
-
+  .navbar_links {
+      display: table;
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+  }
 }
 
-#mobile-menu{
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    transform: translate(5%, 20%);
+#mobile-menu {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: translate(5%, 20%);
 }
 
 
+
+  /* Footer styles (yours already) ===========================================================================================================================*/
 
 
 .footer_section {
