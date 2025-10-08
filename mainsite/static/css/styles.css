@@ -32,7 +32,9 @@ html, body {
 
 
  /*navbar=======================================================================================================================================================*/
- .navbar {
+/* ========================= NAVBAR ========================= */
+
+.navbar {
   background: #edebeb;
   display: flex;
   justify-content: center;
@@ -41,7 +43,7 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 5.5em; /* replaces 9% — consistent and scalable */
+  height: 5.5em;
 }
 
 .navbar_container {
@@ -49,10 +51,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  z-index: 1;
   width: 100%;
-  max-width: 81.25em; /* 1300px */
-  margin: 0 auto;
+  max-width: 81.25em;
   padding: 0 15%;
 }
 
@@ -65,11 +65,7 @@ html, body {
   padding-bottom: 1%;
 }
 
-
-.fa-gem {
-  margin-right: 0.5em;
-}
-
+/* Menu for desktop */
 .navbar_menu {
   display: flex;
   align-items: center;
@@ -82,7 +78,7 @@ html, body {
 }
 
 .navbar_links {
-  color: #6f90e4;
+  color: rgb(8, 117, 163);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -91,65 +87,57 @@ html, body {
 }
 
 .navbar_links:hover {
-  color: #2efa1b;
+  color: rgb(8, 117, 163);
   transition: all 0.3s ease;
 }
 
-/* Responsive */
-@media screen and (max-width: 60em) { /* 960px */
+/* Hamburger hidden by default */
+.navbar_toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 0.25em;
+  width: 1.8em;
+  background-color: rgb(8, 117, 163);
+  margin: 0.3em 0;
+  border-radius: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ============ MOBILE ============ */
+@media screen and (max-width: 60em) {
   .navbar_container {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0 1em;
+    padding: 0 1.5em;
+  }
+
+  .navbar_toggle {
+    display: flex;
   }
 
   .navbar_menu {
-      display: grid;
-      grid-template-columns: auto;
-      width: 100%;
-      opacity: 1;
-      transition: all 0.5s ease;
-      height: 100vh;
-      z-index: -1;
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 5.5em;
+    left: 0;
+    width: 100%;
+    background: #edebeb;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 0;
   }
 
   .navbar_menu.active {
-      background: #edebeb;
-      top: 100%;
-      opacity: 1;
-      z-index: 99;
-      height: 100vh;
-      font-size: 1.6rem;
-  }
-
-  #navbar_logo img {
-      padding-left: 1.5em;
-      height: 3.5em; /* slightly smaller on mobile */
-  }
-
-  .navbar_toggle.bar {
-      width: 1.5em;
-      height: 0.2em;
-      margin: 0.3em auto;
-      background: #2efa1b;
-      transition: all 0.3s ease-in-out;
+    display: flex; /* shown when toggled */
   }
 
   .navbar_links {
-      display: table;
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
+    padding: 1.2em;
+    width: 100%;
   }
 }
-
-#mobile-menu {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  transform: translate(5%, 20%);
-}
-
 
 
   /* Footer styles (yours already) ===========================================================================================================================*/
