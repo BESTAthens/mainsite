@@ -23,3 +23,18 @@ def contact(request):
 
 def joinus(request):
     return render(request, "site_app/joinus.html")
+
+def clue1(request):
+    return render(request, "site_app/clue1.html")
+
+def clue2(request):
+    return render(request, "site_app/clue2.html")
+
+def clue3(request):
+    return render(request, "site_app/clue3.html")
+
+def clue4(request):
+    return render(request, "site_app/clue4.html")
+
+def IT(request):
+    return render(request, "site_app/IT.html")
